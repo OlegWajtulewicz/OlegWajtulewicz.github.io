@@ -1,0 +1,114 @@
+@import '../styles/mixins';
+* {
+    box-sizing: border-box;
+}
+html,
+body {
+    margin: 0;
+    padding: 0;
+    font-size: 16px;
+    line-height: 1.4;
+    font-family: 'Raleway', 'Arial', sans-serif;
+    color: $text;
+}
+a {
+    color: inherit;  
+}
+
+.title {
+    font-size: 32px;
+    @include adaptiveValue("font-size", 32, 24 );
+    font-weight: 500;
+    list-style: .2em;
+    text-transform: uppercase;  
+    text-align: center;  
+    letter-spacing: 1.5px;
+} 
+.line {
+    width: 100px; 
+    height: 3px;
+    background-color: #ff0f82;
+    margin: 32px auto 0; 
+}
+
+.list {
+    width: 100%;
+    padding: 50px 0 80px;
+    text-align: left;
+    &-item {
+        position: relative;
+        padding-left: 30px;
+        &:not(:last-child) {
+            margin-bottom: 20px;
+        }
+        &::before{
+            content:'';
+            position: absolute;
+            top: 50%;
+            left: 0;
+            transform: translateY(-50%);
+            width: 17px;
+            height: 17px;
+            background: url('@/assets/img/heart.svg') no-repeat 50% 50%;
+        }
+    }
+}
+
+.instructions {
+    width: 100%;
+    max-width: 560px;
+    font-size: 20px;
+    font-weight: 400;
+    line-height: 30px;
+    letter-spacing: 0.1em;
+    text-align: center;
+    color: $textMuted;
+}
+
+
+
+
+::-webkit-scrollbar {
+    width: 3px;
+    height: 2px;
+    border-radius: 50%;
+    
+}
+::-webkit-scrollbar-thumb {
+    background: #d6066b7c;
+    cursor: pointer;
+    @media (any-hover: hover){
+        &:hover{
+            background: #d6066b;
+        }
+    }
+}
+::-webkit-scrollbar-track {
+    background: #242424;
+}
+//========================================================================================================================================================
+
+.swiper-button-prev,
+.swiper-button-next {
+    height: 30px !important;
+    color: $accent !important;
+}
+.swiper-pagination-bullet{
+    background: $accent !important;
+}
+.swiper-pagination-bullets {
+    bottom: 0 !important;
+}
+.swiper-button-next:after,
+.swiper-button-prev:after {
+    font-size: 30px !important;
+}
+.swiper-button-prev {
+    left: -5px !important;
+}
+.swiper-button-next {
+    right: -5px !important;
+}
+  
+  
+  
