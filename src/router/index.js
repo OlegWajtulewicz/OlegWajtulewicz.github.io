@@ -1,5 +1,5 @@
 import { createRouter, createWebHistory } from 'vue-router'
-import { ROUTES_PATH } from '../constants'
+import { ROUTES_PATH } from '@/constants'
 import Home from '../pages/Home.vue'
 import Cocktail from '../pages/Cocktail.vue'
 import CocktailRandome from '../pages/CocktailRandome.vue'
